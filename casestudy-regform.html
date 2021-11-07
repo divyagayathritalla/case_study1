@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>registration form</title>
+    <link rel="stylesheet" href="casestudy-regform.css">
+    <script src="casestudy-regform.js"></script>  
+</head>
+
+<body onload="button_disabled()">
+    <h1>
+        <center>
+            <h5> REGISTER HERE</h5>
+        </center>
+    </h1>
+    <div>
+        <form>
+            <div id="personaldetails">
+                <center>
+                    <fieldset style="position: relative; width: 800px; height: 100%;">
+                        <legend>
+                            <center><span style="color: palevioletred" ;>Personal Details</span></center>
+                        </legend>
+                        <table id="table1" style="align-items: center;">
+                            <tr>
+                                <td class="data1"> Enter Your Name : </td>
+                                <td class="data2"><input id="name" type="text" name="n" onkeyup="name_valid()"
+                                        required /><span id="msg"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="data1">Enter MailId : </td>
+                                <td class="data2"><input id="email" type="text" name="f" onkeyup="validate_email()"
+                                        aria-required="true" required /><span id="msg2"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="data1">Enter Date Of Birth : </td>
+                                <td class="data2"><input type="date" name="B" required /></td>
+                            </tr>
+                            <tr>
+                                <td class="data1">Select The Gender :</td>
+                                <td class="options">
+                                    <input type="radio" name="G" onclick=validate_radiobutton(this.value) value="male"
+                                        required />Male <br>
+                                    <input type="radio" name="G" onclick=validate_radiobutton(this.value) value="female"
+                                        required />Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="data1"> Contact Number : </td>
+                                <td class="data2"><input id="number" type="tel" onkeyup="validate_num()" maxlength="10"
+                                        required /><span id="msg3"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="data1"> Address For Communication : </td><br />
+                                <td class="data2"><textarea onkeyup="validate_address()" id="address"
+                                        required></textarea><span id="msg4"></span></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </center>
+            </div>
+            <center>
+                <fieldset style="position: relative; width: 800px; height: 200px">
+                    <legend>
+                        <center><span style="color: palevioletred" ;>Educational Details</span></center>
+                    </legend>
+                    <table id="table2" style="align-items: center; " align="center">
+                        &nbsp;
+                        <tr>
+                            <td class="data1">Languages :</td>
+                            <td class="options" id="checkbox" required>
+                                <input type="checkbox" name="cc"  onchange="validate_checkbox()" /> English
+                                <input type="checkbox" name="cc"  onchange="validate_checkbox()" /> Hindi
+                                <input type="checkbox" name="cc"  onchange="validate_checkbox()" /> Telugu
+                                <input type="checkbox" name="cc"  onchange="validate_checkbox()" /> Spanish
+                                <span id="msg5"></span>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="data1">University/College:</td>
+                            <td class="data2" id="data2" style="width: 1500px;"><input type="text" required /></td>
+                        </tr>
+                        <tr>
+                            <td class="data1">Designation :</td>
+                            <td id="dropdown"> <select style="background-color:rgb(235, 211, 219) ;"   required>
+                                    <option class="dropdown">BTech</option>
+                                    <option class="dropdown">BSc</option>
+                                    <option class="dropdown">MSc</option>
+                                    <option class="dropdown">MTech </option>
+                                    <option class="dropdown">Intermediate</option>
+                                    <option class="dropdown">PhD </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="data1">Skill Set :</td>
+                            <td class="options" id="multiselect"><select multiple="multiple" onchange="validate_multi()" required>
+                                    <option value="1" class="dropdown">Communication </option>
+                                    <option class="dropdown" name="mm">Team Work </option>
+                                    <option class="dropdown" name="mm">Problem Solving</option>
+                                    <option class="dropdown" name="mm">Creativity </option>
+                                    <option class="dropdown" name="mm">Computer Knowledge </option>
+                                    <option class="dropdown" name="mm">Patience</option>
+                                </select>&nbsp;<span id="msg6">
+
+                                </span></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </center>
+            <br />
+            <center>
+                <button id="submit" style="align-items:center"><span
+                        style=" align-items: center;">Submit</span></button> <button id="reset"><span>Reset</span></button>
+                </br></br>
+                <span style="color: palevioletred; text-align: center;">already a member? </span><a
+                    href="loginform A1.html" style="color: deepskyblue;"> Login</a>
+            </center>
+        </form>
+    </div>
+</body>
+</html>
